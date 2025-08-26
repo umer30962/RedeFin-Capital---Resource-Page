@@ -1,0 +1,698 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    background: linear-gradient(to top, rgb(0, 0, 70) 80%, rgb(67, 63, 99));
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu_icon {
+    display: none;
+}
+
+.logo img {
+    width: 80%;
+    height: 9vh;
+    padding: 3%;
+    margin-left: 15%;
+    cursor: pointer;
+}
+
+.nav-links {
+    flex-wrap: wrap;
+    margin-right: 5%;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links ul li {
+    font-size: clamp(0.5rem, 0.714vw + 0.271rem, 1.3rem);
+
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.hero-section img {
+    width: 100%;
+    height: 100vh;
+    filter: blur(1px) brightness(0.6);
+    position: relative;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 40%;
+    height: 50%;
+    text-align: center;
+    color: white;
+}
+
+
+.hero-content h3 {
+    font-size:clamp(1.8rem, 0.574vw + 1.616rem, 2.4rem);
+    line-height: 1.2;
+    margin-bottom: 3%;
+}
+
+.hero-content p {
+    font-size: clamp(0.9rem, 0.287vw + 0.808rem, 1.2rem);
+    margin-bottom: 3%;
+
+}
+
+/* .custom-section {
+  position: relative;
+  background: white;
+  padding: 0;
+  width: 100%;
+} */
+
+.left-shape {
+    z-index: 1;
+    position: absolute;
+    top: 104%;
+    left: 0;
+    width: 20rem;
+    height: 5rem;
+    background: linear-gradient(to top, rgb(0, 0, 70) 90%, rgb(9, 0, 75));
+    clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%);
+    border: 1px solid black;
+    border: none;
+
+}
+
+.right-shape {
+    z-index: 1;
+    position: absolute;
+    top: 104%;
+    right: 0;
+    width: 20rem;
+    height: 5rem;
+    background: linear-gradient(to top, rgb(0, 0, 70) 90%, rgb(9, 0, 75));
+    clip-path: polygon(0 50%, 20% 0, 100% 0, 100% 100%, 20% 100%);
+    border: 1px solid black;
+    border: none;
+    border-top-left-radius: 50px;
+
+}
+
+.small-left-shape {
+    z-index: 0;
+    position: absolute;
+    top: 114%;
+    left: 0;
+    width: 13rem;
+    height: 3rem;
+    border-left: none;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    border: 2.5px solid rgb(0, 0, 70);
+
+}
+
+.small-right-shape {
+    z-index: 0;
+    position: absolute;
+    top: 114%;
+    right: 0;
+    width: 13rem;
+    height: 3rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+    border: 2.5px solid rgb(0, 0, 70);
+    border-right: none;
+
+
+}
+
+.small-left-shape::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 11rem;
+    width: 2px;
+    height: 130%;
+    background: rgb(0, 0, 70);
+    transform: rotate(30deg);
+    transform-origin: bottom left;
+}
+
+.small-right-shape::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 11rem;
+    width: 2px;
+    height: 130%;
+    background: rgb(0, 0, 70);
+    transform: rotate(-32deg);
+    transform-origin: 0 100%;
+}
+
+
+.explore-section {
+
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.explore-content h3 {
+    color: rgb(0, 0, 70);
+    font-size: clamp(1rem, 0.478vw + 0.847rem, 1.5rem);
+    margin-bottom: 1rem;
+}
+
+.explore-content h1 {
+    font-size: clamp(2rem, 0.478vw + 1.847rem, 2.5rem);
+    margin-bottom: 1rem;
+}
+
+.explore-content p {
+    width: 70%;
+    color: grey;
+    font-size: clamp(0.9rem, 0.287vw + 0.808rem, 1.2rem);
+    margin-bottom: 1rem;
+    margin: 0 auto;
+}
+
+
+.service-cards {
+    display: flex;
+    margin: 0 auto;
+    gap: 3rem;
+    width: 60%;
+    margin-top: 5%;
+    flex: 1 1 800px;
+    min-width: 60%;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+}
+
+
+.filled-hexagon-inner-1 {
+    z-index: 0;
+    position: absolute;
+    margin-left: 1rem;
+}
+.mini-2nd-hexa-1,
+.mini-2nd-hexa-2{
+    width: 8rem;
+    height: 8rem;
+   background-color: rgba(255, 255, 255, 0.295);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+     transform: rotate(15deg);
+}
+
+
+.mini-2nd-hexa-1 {
+    margin-top: 4rem;
+    margin-left: -5rem;
+}
+
+.mini-2nd-hexa-2 {
+  margin-left: 12rem;
+  margin-top: 5rem;
+}
+
+
+
+
+.filled-hexagon-inner-2 {
+    z-index: 0;
+    position: absolute;
+    margin-left: 1rem;
+}
+.mini2-2nd-hexa-1,
+.mini2-2nd-hexa-2{
+    width: 8rem;
+    height: 8rem;
+  background-color: rgba(255, 255, 255, 0.295);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+     transform: rotate(15deg);
+}
+
+
+.mini2-2nd-hexa-1 {
+    margin-top: -2rem;
+    margin-left: -4rem;
+}
+
+.mini2-2nd-hexa-2 {
+  margin-left: 8rem;
+  margin-top: 16rem;
+}
+
+
+
+
+.filled-hexagon-inner-3 {
+    z-index: 0;
+    position: absolute;
+    margin-left: 1rem;
+}
+.mini3-2nd-hexa-1,
+.mini3-2nd-hexa-2{
+   width: 8rem;
+    height: 8rem;
+   background-color: rgba(255, 255, 255, 0.295);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+     transform: rotate(15deg);
+}
+
+
+.mini3-2nd-hexa-1 {
+    margin-top: 1rem;
+    margin-left: 11.5rem;
+}
+
+.mini3-2nd-hexa-2 {
+  margin-left: -4rem;
+  margin-top: 12rem;
+}
+.s-card {
+    position: relative;
+    background: linear-gradient(to top, rgb(0, 0, 70) 80%, rgb(26, 15, 109));
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+    width: 15rem;
+    height: 25rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 200px;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+}
+
+
+.s-card i {
+    margin-top: 3.75rem;
+    font-size: clamp(1.5rem, 1.912vw + 0.888rem, 3.5rem);
+    margin-bottom: 2rem;
+}
+
+.s-card h3 {
+    font-size: clamp(0.9rem, 0.574vw + 0.716rem, 1.5rem);
+
+    margin-bottom: 1rem;
+}
+
+.s-card p {
+    font-size: clamp(0.6rem, 0.287vw + 0.508rem, 0.9rem);
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 1rem;
+}
+
+.s-card .explore-btn {
+    font-weight: 600;
+    color: rgb(0, 0, 70);
+    width: 50%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: clamp(0.9rem, 0.191vw + 0.839rem, 1.1rem);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 10px;
+       position: relative;
+    z-index: 2;
+}
+
+.explore-btn i {
+    font-size: 1rem;
+    position: relative;
+    top: -0.85rem;
+    color: rgb(0, 0, 70);
+}
+
+
+
+.about-section {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    padding: 3rem 0;
+  
+}
+
+.about-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.about-content {
+    width: 50%;
+    padding-left: 10%;
+    margin-top: 5%;
+}
+
+.about-content h3 {
+    color: rgb(0, 0, 60);
+    font-size: clamp(1rem, 0.669vw + 0.786rem, 1.7rem);
+    margin-bottom: 1rem;
+}
+
+.about-content h1 {
+
+    font-size: clamp(1.5rem, 1.071vw + 1.143rem, 2.5rem);
+    margin-bottom: 1.5rem;
+    line-height: 1;
+    width: 100%;
+}
+
+.about-content i{
+    margin-right: 1rem;
+}
+
+.about-content h4 {
+    width: 80%;
+    font-size: clamp(0.8rem, 0.478vw + 0.547rem, 1.2rem);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgb(189, 189, 189);
+}
+
+.about-content p{
+    width: 80%;
+    margin-bottom: 1rem;
+    font-size: clamp(0.8rem, 0.478vw + 0.547rem, 1.2rem);
+    color: grey;
+     border-bottom: 2px solid rgb(189, 189, 189);
+      padding-bottom: 1rem;
+}
+
+.about-design {
+    width: 50%;
+    position: relative;
+}
+
+.filled-hexagon {
+    position: absolute;
+    margin-top: -2rem;
+    margin-left: -0.2rem;
+}
+
+.mini-hexa-1,
+.mini-hexa-2,
+.mini-hexa-3 {
+    width: 6.5rem;
+    height: 6.5rem;
+    background: linear-gradient(to top, rgb(0, 0, 70) 80%, rgb(67, 63, 99));
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    position: absolute;
+}
+
+.mini-hexa-1 {
+    margin-left: 5rem;
+    margin-top: 22rem;
+}
+
+.mini-hexa-2 {
+    margin-left: 5rem;
+    margin-top: 28rem;
+}
+
+.mini-hexa-3 {
+    margin-left: rem;
+    margin-top: 25rem;
+}
+
+
+.main-hexagon {
+    width: 20rem;
+    height: 20rem;
+    background-image: url(/images/block.jpg);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    position: absolute;
+    margin-left: 6.6rem;
+    margin-top: 4rem;
+}
+
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.875rem;
+    color: #0b0033;
+    border-radius: 50%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.3125rem;
+    padding-left: 1.0625rem;
+    padding-right: 0.8125rem;
+    background-color: rgb(226, 221, 221);
+    cursor: pointer;
+}
+
+
+
+
+.mini2-hexa-1,
+.mini2-hexa-2,
+.mini2-hexa-3 {
+    width: 6.5rem;
+    height: 6.5rem;
+    background: linear-gradient(to top, rgb(0, 0, 70) 80%, rgb(67, 63, 99));
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+}
+
+.mini2-hexa-1 {
+    margin-left: 22rem;
+    margin-top: 1.5rem;
+}
+
+.mini2-hexa-2 {
+    margin-left: 27rem;
+    margin-top: -9.5rem;
+}
+
+.mini2-hexa-3 {
+    margin-left: 27rem;
+    margin-top: -0.5rem;
+}
+
+
+
+.newsletter{
+  background-color: white;   
+  width: 60%;
+ margin-left: 20%;
+ margin-right: 10%;
+  height: auto;
+  border: 1px solid rgb(0, 0, 70);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+  border: none;
+  transform: translateY(50%);
+  z-index: 1;
+}
+
+.newsletter .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.newsletter-content {
+  width: 55%;
+  display: flex;
+   padding-top: 2rem;
+   padding-right: 5%;
+}
+
+.newsletter i{
+  font-size: clamp(2rem, 1.912vw + 0.888rem, 3.5rem);
+  color: rgb(0, 0, 70);
+  margin-right: 1rem;
+padding-left: 1rem;
+  padding-bottom: 2rem;
+   padding-top: 1.5rem;
+  padding-right: 1rem;
+}
+.newsletter-content h2 {
+  font-size: clamp(1.3rem, 0.478vw + 1.147rem, 1.8rem);
+  margin-bottom: 0.5rem;
+}
+.newsletter-content p {
+  font-size: clamp(0.7rem, 0.382vw + 0.578rem, 1.1rem);
+  color: grey;
+  margin-bottom: 1rem;
+}
+
+.newsletter-design {
+  width: 45%;
+  display: flex;
+}
+
+.newsletter-design input {
+  width: 80%;
+  height: 2rem;
+  padding: 0.5rem;
+  color: black;
+  font-size: clamp(0.8rem, 0.357vw + 0.686rem, 1.2rem);
+  border: 1px solid grey;
+  border-right: none;
+  outline: none;
+}
+
+
+.newsletter-design button {
+ background: linear-gradient(to top, rgb(0, 0, 70) 80%, rgb(67, 63, 99));
+  color: white;
+  border-bottom-right-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  font-size: clamp(0.8rem, 0.357vw + 0.686rem, 1.2rem);
+  cursor: pointer;
+  border-left: none;
+  height: 2rem;
+  width: 15%;
+
+}
+
+.footer{
+  width: 100%;
+  height: auto;
+   background-color: rgb(211, 211, 211);
+  color: black;
+  padding: 2rem 0;
+  z-index: 2;
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+.footer-content {
+  padding-left: 5%;
+  padding-top: 10%;
+  display: flex;
+  gap: 4rem;
+}
+
+
+.foot-1 ul,
+.foot-2 ul,
+.foot-3 ul,
+.foot-4 ul,
+.foot-5 ul {
+    list-style: none;
+}
+.foot-1 h4,
+.foot-2 h4,
+.foot-3 h4,
+.foot-4 h4,
+.foot-5 h4,
+.foot-6 h4 {
+   font-size: clamp(1rem, 0.287vw + 0.908rem, 1.3rem);
+   margin-bottom: 0.5rem;
+}
+
+.foot-1 ul li,
+.foot-2 ul li,
+.foot-3 ul li,
+.foot-4 ul li,
+.foot-5 ul li,
+.foot-6 ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.foot-1 ul li a,
+.foot-2 ul li a,
+.foot-3 ul li a,
+.foot-4 ul li a,
+.foot-5 ul li a {
+    text-decoration: none;
+    color: grey;
+    font-size: clamp(0.8rem, 0.287vw + 0.686rem, 1.2rem);
+}
+
+
+
+.foot-6 ul {
+    list-style: none;
+    display: flex;
+    font-size: clamp(1.5rem, 0.669vw + 1.286rem, 2.2rem);
+    gap: 2rem;
+    margin-top: 1rem;
+    
+}
+.foot-6 ul li a{
+    text-decoration: none;
+    color: grey;
+}
+
+
+.foot-6 img {
+    padding-top: 0.5rem;
+    cursor: pointer;
+}
+
+.sub-footer{
+  width: 100%;
+  color:gray;
+  background-color: rgb(211, 211, 211);
+}
+
+.sub-footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sub-footer p {
+  font-size: clamp(0.7rem, 0.382vw + 0.578rem, 1.1rem);
+ padding-top: 1rem;
+}
