@@ -83,23 +83,18 @@ header {
 
 
 .hero-content h3 {
-    font-size:clamp(1.8rem, 0.574vw + 1.616rem, 2.4rem);
+    font-size:clamp(1.5rem, 0.86vw + 1.225rem, 2.4rem);
     line-height: 1.2;
     margin-bottom: 3%;
 }
 
 .hero-content p {
-    font-size: clamp(0.9rem, 0.287vw + 0.808rem, 1.2rem);
+    font-size:clamp(0.8rem, 0.478vw + 0.647rem, 1.3rem);
     margin-bottom: 3%;
 
 }
 
-/* .custom-section {
-  position: relative;
-  background: white;
-  padding: 0;
-  width: 100%;
-} */
+
 
 .left-shape {
     z-index: 1;
